@@ -11,6 +11,7 @@ const jestConfig: JestConfigWithTsJest = {
   },
   testMatch: ['<rootDir>/test/**/*.test.ts'],
   // collectCoverage: true,
+  moduleFileExtensions: ['ts'],
   modulePaths: ['<rootDir>/src'],
   moduleNameMapper: {
     '^@/(.+)': '<rootDir>/src/$1',

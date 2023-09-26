@@ -1,23 +1,26 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'jest'],
   env: {
     browser: true,
     commonjs: true,
+    'jest/globals': true,
   },
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.eslint.json',
+    // project: './tsconfig.eslint.json',
     tsconfigRootDir: __dirname,
   },
   ignorePatterns: ['dist'],
-  include: ['./jest.config.ts'],
+  // include: ['./jest.config.ts'],
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
   ],
   rules: {
     eqeqeq: 'error',
@@ -38,5 +41,8 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': ['error'],
     '@typescript-eslint/no-require-imports': ['error'],
+    //TODO:jestに対するルールが効いていないため対応
+    'jest/consistent-test-it': ['error', { fn: 'it' }],
+    'jest/require-top-level-describe': ['error'],
   },
 };
