@@ -10,6 +10,7 @@ const jestConfig: JestConfigWithTsJest = {
     ...tsjPreset.transform,
   },
   testMatch: ['<rootDir>/test/**/*.test.ts'],
+  // collectCoverage: true,
   modulePaths: ['<rootDir>/src'],
   moduleNameMapper: {
     '^@/(.+)': '<rootDir>/src/$1',
