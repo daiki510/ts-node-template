@@ -2,9 +2,9 @@
   "name": "ts-node-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "volta": {
-    "node": "18.15.0"
+    "node": "18.19.1"
   },
   "scripts": {
     "build": "npx tsc --project tsconfig.build.json",
