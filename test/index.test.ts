@@ -1,4 +1,4 @@
-import { generateMessage } from '@/sample';
+import { generateMessage } from '@/index';
 
 describe('generateMessage', () => {
   it('should return 「Hello, World!」', () => {
